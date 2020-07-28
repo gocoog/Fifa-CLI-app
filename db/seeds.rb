@@ -78,7 +78,3 @@ neymar_national_contract = Contract.create({player: neymar_junior, team: brazil_
 ederson = Player.create({first_name: "Ederson", last_name: "Santana de Moraes", position: "goalkeeper", number: 1})
 brazil_national_football_team = Team.create({team_name: "Brazil national football team", league: "International"})
 ederson_national_contract = Contract.create({player: ederson_moraes, team: brazil_national_football_team , amount: 2000000, date: "6/25/2015"})
-
-
-
-
