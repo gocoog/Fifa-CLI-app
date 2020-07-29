@@ -11,7 +11,21 @@ class Player < ActiveRecord::Base
         self.first_name + " " + self.last_name
     end
 
-    # def team 
-    #     self.teams.map {|i| i.team_name}
+    def retired
+        self.destroy
+    end
+
+    def plays_for(name)
+        team = Team.find_or_create_by(name: name)
+        self.team = team
+    end
+
+    # def new_teams({number: num, *team_name})
+    #     index = 0 
+    #     num_of_teams = num
+
+    #     while index < num
+    #         self.teams = team_name
+    #     end
     # end
 end
