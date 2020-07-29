@@ -1,5 +1,9 @@
 require "bundler/setup"
 require "sinatra/activerecord"
+require 'colorize'
+require 'artii'
+require "tty-prompt"
+
 Bundler.require
 require_all 'app/models'
 
