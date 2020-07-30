@@ -77,9 +77,8 @@ while (input = gets.chomp) != 'exit'
         commands
         puts "#" * 55
     elsif player == nil
-        puts "Player not found. Would you like to create one?(yes or no)"
-        answer = gets.chomp
-        if answer == 'yes'
+        answer = prompt.yes?("Player not found. Would you like to create one?(yes or no)")
+        if answer == true
             puts "First name: "
             first_n = gets.chomp.capitalize
             puts "Last namme: "
@@ -89,7 +88,7 @@ while (input = gets.chomp) != 'exit'
             puts "Number: "
             new_number = gets.chomp
             new_player = Player.create({first_name: first_n, last_name: last_n, position: new_position, number: new_number})
-            puts "Player created! Enter new search"
+            puts "Player created!"
             choices = Team.all.map  {|i| i.team_name}
             team_choice = prompt.select("What team does he play for?", choices)
             team_choice = Team.find_or_create_by(team_name: team_choice)
@@ -99,7 +98,7 @@ while (input = gets.chomp) != 'exit'
             puts "enter todays date:"
             new_date = gets.chomp
             new_contract = Contract.create({player_id: new_player.id, team_id: team_choice.id, amount: new_amount, date: new_date})
-            puts "done"
+            puts "Congratulations! He has entered our database with all of the greats. Please enter a new command:"
         else 
             puts "Okay please enter a command or player name"
             next
@@ -117,8 +116,11 @@ BEGIN{
     def commands
         puts "Type in player first and/or last name to search player details"
         puts "Type 'all players' to see a list of all players"
+        puts "Type 'all teams' to see a list of all teams belonging to FIFA"
+        puts "New team is joining FIFA? Type 'new team' and enter info to add this incredible team!"
+        puts "New superstar is going pro? Just type the player name in and add their details! Congratulations!"
         puts "Type player name plus 'retired' to bid farewell to a player who is retiring"
-        puts "type player name + 'net worth' to see total net worth of contracts"
+        puts "Type player name + 'net worth' to see total net worth of contracts"
         puts "Type 'exit' to exit the application"
     end
 }
