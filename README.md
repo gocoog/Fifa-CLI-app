@@ -33,3 +33,10 @@
 * Team instance
 * Contract sign date
 * Amount
+
+     Brainstorming and Proposing a Project Idea
+
+•	As a user, I should be able to know about every single player’s net worth
+•	As a user, I want to be able to choose and set specific team for each player
+•	As a user, I should be able to end contract and retire each player
+•	As a user, I want to be able get information about each team’s all players
