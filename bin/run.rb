@@ -4,6 +4,7 @@ require 'pry'
 prompt = TTY::Prompt.new
 a = Artii::Base.new
 puts a.asciify('FIFA CLI App').bold.blue
+pid = fork{ exec 'afplay', "res/FIFA anthem.mp3" }
 puts "Hello and welcome to our Fifa player database!"
 puts "Please type in a player name or type 'help' to bring up a list of commands:"
 
@@ -44,7 +45,12 @@ while (input = gets.chomp) != 'exit'
         new_contract = Contract.create({player_id: player.id, team_id: team_choice.id, amount: new_amount, date: new_date})
         puts "done"
     elsif input.include?("new team") == true
-        puts "enter team names"
+        puts "Enter new team name:"
+        new_team = gets.chomp.capitalize
+        puts "What league will this team play in?"
+        league = gets.chomp.capitalize
+        Team.create(team_name: new_team, league: league)
+        puts "New team created!"
     elsif input.include?('net worth') == true
         puts "-------------------------"
         puts "total contract net worth = $#{player.net_worth}"
@@ -105,6 +111,7 @@ while (input = gets.chomp) != 'exit'
 
 end
 puts "Goodbye!"
+pid = fork{ system 'killall', 'afplay' }
 
 BEGIN{
     def commands
