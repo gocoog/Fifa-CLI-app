@@ -4,7 +4,7 @@ require 'pry'
 prompt = TTY::Prompt.new
 a = Artii::Base.new
 puts a.asciify('FIFA CLI App').bold.blue
-pid = fork{ exec 'afplay', "res/FIFA anthem.mp3" }
+pid = fork{ exec 'afplay', "res/FIFA-anthem.mp3" }
 puts "Hello and welcome to our Fifa player database!"
 puts "Please type in a player name or type 'help' to bring up a list of commands:"
 
