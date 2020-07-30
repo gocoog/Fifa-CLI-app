@@ -28,7 +28,7 @@ ronaldinho_contract = Contract.create({player: ronaldinho, team: barcelona, amou
 
 zlatan = Player.create({first_name: "Zlatan", last_name: "Ibrahimovic", position: "forward", number: 21})
 milan = Team.create({team_name: "AC Milan", league: "Serie A"})
-zlatan_contract = Contract.create({player: zlatan, team: milan, amount: 8000000, date: "9/04/1019"})
+zlatan_contract = Contract.create({player: zlatan, team: milan, amount: 8000000, date: "9/04/2019"})
 
 
 ederson = Player.create({first_name: "Ederson", last_name: "Santana de Moraes", position: "goalkeeper", number: 31})
@@ -70,3 +70,34 @@ brazil_national_football_team  = Team.create({team_name: "Brazil national footba
 neymar_national_contract = Contract.create({player: neymar_junior, team: brazil_national_football_team , amount: 18000000, date: "08/03/2014"})
 
 ederson_national_contract = Contract.create({player: ederson, team: brazil_national_football_team , amount: 2000000, date: "6/25/2015"})
+
+
+sweden_national_football_team = Team.create({team_name: "Sweden national football team", league: "International"})
+zlatan__national_contract = Contract.create({player: zlatan, team: sweden_national_football_team, amount: 2000000, date: "9/04/2011"})
+
+germany_national_football_team = Team.create({team_name: "Germany national football team", league: "International"})
+neuer_national_contract = Contract.create({player: neuer, team: bgermany_national_football_team amount: 4000000, date: "4/26/2013"})
+
+
+
+france_national_football_team = Team.create({team_name: "France national football team", league: "International"})
+paul_national_contract = Contract.create({player: paul, team: france_national_football_team , amount: 9000000, date: "12/14/2014"})
+
+
+spain_national_under-23_football_team = Team.create({team_name: "Spain national under-23 football team", league: "International"})
+koke__national_contract = Contract.create({player: koke, team: spain_national_under-23_football_team, amount: 10000000, date: "7/12/2015"})
+
+
+ronaldinho_national_contract = Contract.create({player: ronaldinho, team: brazil_national_football_team , amount: 22000000, date: "08/03/2008"})
+
+
+arshavin = Player.create({first_name: "Andrey", last_name: "Arshavin", position: "mid", number: 28})
+arsenal = Team.create({team_name: "Arsenal F.C.", league: "Premier League"})
+arshavin_contract = Contract.create({player: arshavin, team: arsenal, amount: 14000000, date: "12/04/2011"})
+
+
+russia_national_football_team = Team.create({team_name: "Russia national football team", league: "International"})
+arshavin_contract = Contract.create({player: arshavin, team: russia_national_football_team, amount: 4000000, date: "11/04/2012"})
+
+
+
