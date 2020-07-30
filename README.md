@@ -15,8 +15,9 @@
 ## MVP
 * Player can be created
 * Player method for returning team name & contract details
-* contract contains team instance and player instance as well as contract amount
-
+* Contract contains team instance and player instance as well as contract amount
+* Player can be retired to keep up to date data of active players
+* Teams joining a league can be created
 
 ## Class instance variables
 ### Player
@@ -34,9 +35,8 @@
 * Contract sign date
 * Amount
 
-   ###  Brainstorming and Proposing a Project Idea
-
-* As a user, I should be able to know about every single player’s net worth
-* As a user, I want to be able to choose and set specific team for each player
+### User Stories
+* As a user, I should be able to know about every single player’s team and contract details
+* As a user, I want to be able to choose and set specific team for each new player
 * As a user, I should be able to end contract and retire each player
-* As a user, I want to be able get information about each team’s all players
+* As a user, I want to be able get information about each team’s players
